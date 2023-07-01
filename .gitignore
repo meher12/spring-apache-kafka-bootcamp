@@ -1,39 +1,19 @@
-# spring backend
 
-### Eclipse ###
-.classpath
-.editorconfig
-.factorypath
-.gitattributes
-.project
-.settings/
-bin/
-target/
+### Gradle ###
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-### Maven ###
-target/
-.mvn/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
-
-# Outputs
-    2 bazel-*
-    3 test-project-host-*
-    4 dist/
-    5 dist-schema/
-    6
-    7 # IDEs
-    8 jsconfig.json
-    9
-   10 # Intellij IDEA/WebStorm
-   11 # https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 .idea/inspectionProfiles/
 .idea/**/compiler.xml
 .idea/**/encodings.xml
