@@ -1,8 +1,10 @@
-# Java Spring & Apache Kafka Bootcamp - Basic to Complete
+# Java Spring & Apache Kafka Bootcamp - From Fundamentals to Advanced
 
-Welcome to the **Java Spring & Apache Kafka Bootcamp - Basic to Complete** project!
+Welcome to the **Java Spring & Apache Kafka Bootcamp - From Fundamentals to Advanced** project!
 
-This bootcamp is designed to provide a comprehensive understanding of Java Spring and Apache Kafka, covering the basics to advanced concepts. Whether you're a beginner looking to learn these technologies from scratch or an experienced developer seeking to deepen your knowledge, this bootcamp has got you covered.
+This bootcamp is designed to provide a comprehensive understanding of Java Spring and Apache Kafka, covering the core concepts to advanced techniques.
+Whether you're a beginner looking to learn these technologies from scratch or an experienced developer seeking to enhance your skills, this bootcamp
+has got you covered.
 
 ## Features
 
@@ -18,7 +20,6 @@ To get the most out of this bootcamp, it is recommended to have prior knowledge 
 
 ## Getting Started
 
-To start learning with the **Java Spring & Apache Kafka Bootcamp**, clone or download this repository to your local machine. Follow the instructions provided in the individual modules and projects to progress through the bootcamp. Feel free to reach out if you have any questions or need assistance.
+To start learning with the **Java Spring & Apache Kafka Bootcamp - From Fundamentals to Advanced**, clone or download this repository to your local machine. Follow the instructions provided in the individual modules and projects to progress through the bootcamp. Feel free to reach out if you have any questions or need assistance.
 
 Let's embark on this learning journey together and become proficient in Java Spring and Apache Kafka!
-
