@@ -82,17 +82,24 @@ and detailed guides.
 * We can use application.properties or application.yml,
 I prefer yml format for readability it's optional
 1. Part 1: Setup kafka Producer and Consumer
-2. Run docker compose of the specific kafka project
-   * Torun kafka specific project
-     - docker-compose -f docker-compose-core.yml -p core up -d
-       <div style="center">
-         <img src="runkafkadockerbyproject.jpg" width="400px"/>
-       </div>
-   * To remove some container and run another :
+2. Docker Compose commands:
+   * Start containers
+     ```
+        docker-compose -f docker-compose-core.yml -p core up -d
+        docker-compose -f docker-compose-connect.yml -p connect up -d
+        docker-compose -f docker-compose-connect-sample.yml -p connect-sample up -d
+        docker-compose -f docker-compose-full.yml -p full up -d
+        docker-compose -f docker-compose-full-sample.yml -p full-sample up -d
+     ```
+   * Stop containers :
       - docker-compose -f [script-file] -p [project] down
-        <div style="center">
-           <img src="downprojectkafka.jpg" width="400px"/>
-        </div>
+        ``` 
+         docker-compose -f docker-compose-core.yml -p core down
+         docker-compose -f docker-compose-connect.yml -p connect down
+         docker-compose -f docker-compose-connect-sample.yml -p connect-sample down
+         docker-compose -f docker-compose-full.yml -p full down
+         docker-compose -f docker-compose-full-sample.yml -p full-sample down
+        ```
    * The command ***"docker exec -it kafka bash"*** is used to start an interactive bash shell session
 inside a running Docker container named "kafka"
 3. Hello kafka - Topic & Partition
@@ -100,4 +107,5 @@ inside a running Docker container named "kafka"
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-hello```
    - Describe Topic:
      ```kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t-hello```
+
    
