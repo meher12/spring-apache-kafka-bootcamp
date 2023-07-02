@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Service
+//@Service
 public class FixedRate2Producer {
 
     public static final Logger LOG = LoggerFactory.getLogger(FixedRate2Producer.class);

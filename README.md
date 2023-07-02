@@ -120,6 +120,14 @@ inside a running Docker container named "kafka"
    1. Create t-fixedrate-2 Topic
    2. In application.yml add ```auto-offset-reset: earliest``` 
    * Now we can get all data in the consumer from First Run
+7. Producing Message With Key:
+   ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 3 --replication-factor 1 --topic t-multi-partitions```
+   * In each terminal :
+   ```
+     kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t-multi-partitions --offset earliest --partition 0
+     kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t-multi-partitions --offset earliest --partition 1
+     kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t-multi-partitions --offset earliest --partition 2
+   ```
    
 
    
