@@ -81,5 +81,23 @@ and detailed guides.
 ## 01 - Start Writing Codes
 * We can use application.properties or application.yml,
 I prefer yml format for readability it's optional
-1. Part 1: Setup kafka Producer and Consumer 
-
+1. Part 1: Setup kafka Producer and Consumer
+2. Run docker compose of the specific kafka project
+   * Torun kafka specific project
+     - docker-compose -f docker-compose-core.yml -p core up -d
+       <div style="center">
+         <img src="runkafkadockerbyproject.jpg" width="400px"/>
+       </div>
+   * To remove some container and run another :
+      - docker-compose -f [script-file] -p [project] down
+        <div style="center">
+           <img src="downprojectkafka.jpg" width="400px"/>
+        </div>
+   * The command ***"docker exec -it kafka bash"*** is used to start an interactive bash shell session
+inside a running Docker container named "kafka"
+3. Hello kafka - Topic & Partition
+   - Create hello topic:
+   ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-hello```
+   - Describe Topic:
+     ```kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t-hello```
+   
