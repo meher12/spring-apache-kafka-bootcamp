@@ -132,5 +132,10 @@ inside a running Docker container named "kafka"
    * Kafka Consumer ***Concurrency***: Creating multiple instances of a Kafka consumer application and assigned to different partitions within a consumer group,
 allowing independent processing of messages from each partition and achieving parallel processing
 ## 02 -  Working with JSON Message
-1. Add jackson dependencies
+1. Adding jackson dependencies
+2. Producing JSON Message
+   1. Create t-employee topic
+   ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-employee```
+   2. Create EmployeeJsonProducer class and check it by using:
+   ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-employee```
    
