@@ -131,5 +131,6 @@ inside a running Docker container named "kafka"
 8. Multiple Consumers for Each Topic: ****concurrency = "4"****
    * Kafka Consumer ***Concurrency***: Creating multiple instances of a Kafka consumer application and assigned to different partitions within a consumer group,
 allowing independent processing of messages from each partition and achieving parallel processing
-
+## 02 -  Working with JSON Message
+1. Add jackson dependencies
    
