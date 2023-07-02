@@ -17,8 +17,8 @@ public class KafkaCoreProducerApplication implements CommandLineRunner {
 
 //	@Autowired
 //	private HelloKafkaProducer producer;
-	@Autowired
-	private FixedRateProducer fixedRateProducer;
+//	@Autowired
+//	private FixedRateProducer fixedRateProducer;
 	public static void main(String[] args) {
 		SpringApplication.run(KafkaCoreProducerApplication.class, args);
 	}

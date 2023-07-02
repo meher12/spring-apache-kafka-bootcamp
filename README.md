@@ -72,7 +72,7 @@ Apache Kafka is commonly used for real-time data streaming applications, such as
 
 To get started with Apache Kafka, refer to the
 official [Apache Kafka documentation](https://kafka.apache.org/documentation/) for installation instructions, tutorials,
-and detailed guides.
+and detailed guides.Consumer is Real Time Indeed
 ### Kafka Basic Concepts:
 <div style="center">
 <img src="storageroomstructure.jpg" width="400px"/>
@@ -113,4 +113,13 @@ inside a running Docker container named "kafka"
 5. Consumer is Real Time Indeed:
    - Create Topic t-fixedrate:
     ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-fixedrate```
+6. Fixing Consumer - Consumer Offset on First Run
+         <div style="center">
+           <img src="consumerOffset.jpg" width="500px"/>
+         </div>
+   1. Create t-fixedrate-2 Topic
+   2. In application.yml add ```auto-offset-reset: earliest``` 
+   * Now we can get all data in the consumer from First Run
+   
+
    
