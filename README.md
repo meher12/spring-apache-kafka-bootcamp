@@ -107,5 +107,5 @@ inside a running Docker container named "kafka"
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-hello```
    - Describe Topic:
      ```kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t-hello```
-
+4. Hello kafka - Producer/Consumer
    

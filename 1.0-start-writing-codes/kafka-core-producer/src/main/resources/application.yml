@@ -5,9 +5,5 @@ logging:
 spring:
   main:
     banner-mode: OFF
-  kafka:
-    consumer:
-      group-id: default-spring-producer
-      auto-offset-reset: earliest
   jackson:
     date-format: yyyy-MMM-dd
