@@ -128,6 +128,8 @@ inside a running Docker container named "kafka"
      kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t-multi-partitions --offset earliest --partition 1
      kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t-multi-partitions --offset earliest --partition 2
    ```
-   
+8. Multiple Consumers for Each Topic: ****concurrency = "4"****
+   * Kafka Consumer ***Concurrency***: Creating multiple instances of a Kafka consumer application and assigned to different partitions within a consumer group,
+allowing independent processing of messages from each partition and achieving parallel processing
 
    
