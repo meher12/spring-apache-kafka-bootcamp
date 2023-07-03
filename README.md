@@ -168,3 +168,4 @@ already has jackson library
 5. Rebalancing:
    * Rebalancing: Automatic redistribution of partitions in a Kafka consumer group to ensure load balancing and fault tolerance.
    - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-rebalance```
+6. Kafka Configuration
