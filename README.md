@@ -150,7 +150,7 @@ during serialization and deserialization. It provides flexibility to convert nam
         <div style="center">
           <img src="consumergroup.jpg" width="400px">
         </div>
-     1. Create Producer:
+     1. **Create Producer**:
         1. Create t-commodity topic
         ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity```
         2. Create CommodityService 
@@ -161,4 +161,7 @@ already has jackson library
            3. Create CommodityAPI class and run producer look here ```http://localhost:8080/api/commodity/v1/all```
            4. Create CommodityProducer And CommodityScheduler
            5. To check producer: ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-commodity```
-   
+     2. **Create Consumer**:
+        1. Create CommodityDashboardConsumer and CommodityNotificationConsumer Consumer
+        2. To see the group: ```kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group cg-dashboard --describe```
+        3. To rest offset: ```kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group cg-dashboard --execute --reset-offsets --to-offset 10 --topic t-commodity:0```
