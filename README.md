@@ -145,5 +145,20 @@ allowing independent processing of messages from each partition and achieving pa
 during serialization and deserialization. It provides flexibility to convert names between Java objects and JSON formats.
       3. To check "Employee2JsonProducer.class"  it by using ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-employee-2```
 3. Consuming JSON Message:
-   1. Create ObjectMapper Bean, Employee class, add jackson: date-format: yyyy-MMM-dd to application.yml file
+   - Create ObjectMapper Bean, Employee class, add jackson: date-format: yyyy-MMM-dd to application.yml file
+4. Consuming with Consumer Group:
+        <div style="center">
+          <img src="consumergroup.jpg" width="400px">
+        </div>
+     1. Create Producer:
+        1. Create t-commodity topic
+        ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity```
+        2. Create CommodityService 
+        3. Create CommodityAPI:
+           1. Add ```implementation "org.springframework.boot:spring-boot-starter-web"``` this dependency
+already has jackson library 
+           2. Comment JsonConfig class
+           3. Create CommodityAPI class and run producer look here ```http://localhost:8080/api/commodity/v1/all```
+           4. Create CommodityProducer And CommodityScheduler
+           5. To check producer: ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-commodity```
    

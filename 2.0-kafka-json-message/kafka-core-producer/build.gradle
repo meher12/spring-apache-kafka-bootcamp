@@ -15,17 +15,19 @@ repositories {
 	mavenCentral()
 }
 
-ext {
-	set("jacksonVersion", "2.15.2")
-}
+//ext {
+//	set("jacksonVersion", "2.15.2")
+//}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.kafka:spring-kafka'
 
-	implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
-	implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
-	implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+//	implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+//	implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+//	implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+
+	implementation "org.springframework.boot:spring-boot-starter-web"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
