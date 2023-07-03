@@ -133,7 +133,7 @@ inside a running Docker container named "kafka"
 allowing independent processing of messages from each partition and achieving parallel processing
 ## 02 -  Working with JSON Message
 1. Adding jackson dependencies
-2. Producing JSON Message
+2. Producing JSON Message:
    1. Create t-employee topic
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-employee```
    2. Create EmployeeJsonProducer class and check it by using:
@@ -144,5 +144,6 @@ allowing independent processing of messages from each partition and achieving pa
          * @JsonNaming(value = PropertyNamingStrategy.class): is a Jackson library annotation for Java that allows you to customize how Java class field/property names are mapped to JSON representation
 during serialization and deserialization. It provides flexibility to convert names between Java objects and JSON formats.
       3. To check "Employee2JsonProducer.class"  it by using ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-employee-2```
-
+3. Consuming JSON Message:
+   1. Create ObjectMapper Bean, Employee class, add jackson: date-format: yyyy-MMM-dd to application.yml file
    
