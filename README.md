@@ -165,3 +165,6 @@ already has jackson library
         1. Create CommodityDashboardConsumer and CommodityNotificationConsumer Consumer
         2. To see the group: ```kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group cg-dashboard --describe```
         3. To rest offset: ```kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group cg-dashboard --execute --reset-offsets --to-offset 10 --topic t-commodity:0```
+5. Rebalancing:
+   * Rebalancing: Automatic redistribution of partitions in a Kafka consumer group to ensure load balancing and fault tolerance.
+   - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-rebalance```

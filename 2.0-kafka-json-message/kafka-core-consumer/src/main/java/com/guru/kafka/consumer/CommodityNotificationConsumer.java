@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
 public class CommodityNotificationConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(CommodityNotificationConsumer.class);
