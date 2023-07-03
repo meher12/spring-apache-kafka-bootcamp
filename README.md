@@ -138,4 +138,10 @@ allowing independent processing of messages from each partition and achieving pa
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-employee```
    2. Create EmployeeJsonProducer class and check it by using:
    ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-employee```
+3. Customize JSON Format
+   1. Create t-employee-2 topic
+   2. Customize JSON Format:
+      * @JsonNaming(value = PropertyNamingStrategy.class): is a Jackson library annotation for Java that allows you to customize how Java class field/property names are mapped to JSON representation
+during serialization and deserialization. It provides flexibility to convert names between Java objects and JSON formats.
+   3. To check "Employee2JsonProducer.class"  it by using ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-employee-2```
    

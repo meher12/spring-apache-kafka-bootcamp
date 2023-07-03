@@ -1,7 +1,11 @@
 package com.guru.kafka.entity;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
 import java.time.LocalDate;
 
+@JsonNaming(value = PropertyNamingStrategy.class)
 public class Employee {
 
     private String employeeId;

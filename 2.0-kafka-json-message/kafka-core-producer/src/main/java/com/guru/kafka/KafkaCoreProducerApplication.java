@@ -1,6 +1,7 @@
 package com.guru.kafka;
 
 import com.guru.kafka.entity.Employee;
+import com.guru.kafka.producer.Employee2JsonProducer;
 import com.guru.kafka.producer.EmployeeJsonProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,7 +14,7 @@ import java.time.LocalDate;
 public class KafkaCoreProducerApplication implements CommandLineRunner {
 
 	@Autowired
-	private EmployeeJsonProducer jsonProducer;
+	private Employee2JsonProducer jsonProducer;
 	public static void main(String[] args) {
 		SpringApplication.run(KafkaCoreProducerApplication.class, args);
 	}

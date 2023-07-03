@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-//@Service
-public class EmployeeJsonProducer {
+@Service
+public class Employee2JsonProducer {
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
@@ -18,7 +18,7 @@ public class EmployeeJsonProducer {
 
     public void sendMessage(Employee employee) throws JsonProcessingException {
         var jsonEmployee = objectMapper.writeValueAsString(employee);
-        kafkaTemplate.send("t-employee", jsonEmployee);
+        kafkaTemplate.send("t-employee-2", jsonEmployee);
 
     }
 }
