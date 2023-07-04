@@ -1,7 +1,9 @@
 package com.guru.kafka;
 
 import com.guru.kafka.producer.ImageProducer;
+import com.guru.kafka.producer.InvoiceProducer;
 import com.guru.kafka.service.ImageService;
+import com.guru.kafka.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,11 +18,17 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
     @Autowired
     private SimpleNumberProducer simpleNumberProducer;*/
 
-    @Autowired
+   /* @Autowired
     private ImageService imageService;
 
     @Autowired
-    private ImageProducer imageProducer;
+    private ImageProducer imageProducer;*/
+
+    @Autowired
+    private InvoiceService invoiceService;
+
+    @Autowired
+    private InvoiceProducer invoiceProducer;
 
     public static void main(String[] args) {
         SpringApplication.run(ProducerHandlingExceptionApplication.class, args);
@@ -41,7 +49,7 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
             simpleNumberProducer.send(simpleNumber);
         }*/
 
-        var image1 = imageService.generateImage("jpg");
+     /*   var image1 = imageService.generateImage("jpg");
         var image2 = imageService.generateImage("svg");
         var image3 = imageService.generateImage("png");
         var image4 = imageService.generateImage("gif");
@@ -53,7 +61,16 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
         imageProducer.send(image3, 0);
         imageProducer.send(image4, 1);
         imageProducer.send(image5, 1);
-        imageProducer.send(image6, 1);
+        imageProducer.send(image6, 1);*/
+
+        for (int i = 0; i < 10; i++) {
+            var invoice = invoiceService.generateInvoice();
+
+            if(i>5){
+                invoice.setAmount(0);
+            }
+            invoiceProducer.send(invoice);
+        }
 
 
     }

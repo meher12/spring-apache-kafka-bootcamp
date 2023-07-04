@@ -191,3 +191,24 @@ and return the cars located farthest away, up to 100 km.
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-simple-number```
 3. Retrying Consumer:
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 2 --replication-factor 1 --topic t-image```
+4. Dead Letter Topic (Dead Letter Queues):
+   * A designated topic where messages that cannot be processed are sent for further analysis or handling.
+   * Scenario: 
+     - Publish to t-invoice
+     - If amount is less than one, throw exception
+     - Retry 5 times
+     - After 5 failed retry attempts, publish to t-invoice-dead
+     - Another consumer will consume from t-invoice-dead
+     - ```
+       kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 2 --replication-factor 1 --topic t-invoice
+       kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 2 --replication-factor 1 --topic t-invoice-dead
+       
+       kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-invoice
+       kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-invoice-dead
+        kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 1 --topic t-invoice
+       kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 1 --topic t-invoice-dead
+       ```
+       -  <div style="center">
+           <img src="deadletter.jpg" width="500px"/>
+         </div>
+       
