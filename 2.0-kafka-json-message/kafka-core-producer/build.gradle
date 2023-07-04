@@ -15,9 +15,10 @@ repositories {
 	mavenCentral()
 }
 
-//ext {
+ext {
 //	set("jacksonVersion", "2.15.2")
-//}
+	set("caffeineVersion", "3.1.6")
+}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
@@ -28,6 +29,8 @@ dependencies {
 //	implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
 
 	implementation "org.springframework.boot:spring-boot-starter-web"
+
+	implementation "com.github.ben-manes.caffeine:caffeine:${caffeineVersion}"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'

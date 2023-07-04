@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class CarLocationScheduler {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(CarLocationScheduler.class);

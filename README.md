@@ -175,4 +175,8 @@ already has jackson library
            <img src="messageFilter.jpg" width="500px"/>
          </div>
    - containerFactory: Configures message listener containers for consuming Kafka messages in Spring applications.
-   - By using ***containerFactory="farLocationContainerFactory"*** We filter the list of cars within the range of 1 to 100 and return the cars located farthest away, up to 100 km.
+   - By using ***containerFactory="farLocationContainerFactory"*** We filter the list of cars within the range of 1 to 100
+and return the cars located farthest away, up to 100 km.
+8. Idempotency
+   - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-purchase-request```
+   - ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-purchase-request```

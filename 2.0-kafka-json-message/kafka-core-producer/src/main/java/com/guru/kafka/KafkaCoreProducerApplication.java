@@ -1,32 +1,36 @@
 package com.guru.kafka;
 
-import com.guru.kafka.entity.Employee;
-import com.guru.kafka.producer.Employee2JsonProducer;
-import com.guru.kafka.producer.EmployeeJsonProducer;
+import com.guru.kafka.entity.PurchaseRequest;
+import com.guru.kafka.producer.PurchaseRequestProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-import java.time.LocalDate;
-
 @SpringBootApplication
 @EnableScheduling
 public class KafkaCoreProducerApplication implements CommandLineRunner {
 
-	/*@Autowired
-	private Employee2JsonProducer jsonProducer;*/
-	public static void main(String[] args) {
-		SpringApplication.run(KafkaCoreProducerApplication.class, args);
-	}
+    @Autowired
+    private PurchaseRequestProducer producer;
 
-	@Override
-	public void run(String... args) throws Exception {
-		/*for (int i = 0; i < 5; i++) {
-            var emp = new Employee("emp-" + i, "Employee " + i, LocalDate.now());
-			jsonProducer.sendMessage(emp);
-		}*/
+    public static void main(String[] args) {
+        SpringApplication.run(KafkaCoreProducerApplication.class, args);
+    }
 
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        var pr1 = new PurchaseRequest(5551, "PR-First", 991, "USD");
+        var pr2 = new PurchaseRequest(5551, "PR-Second", 992, "USD");
+        var pr3 = new PurchaseRequest(5551, "PR-Third", 993, "USD");
+
+        producer.send(pr1);
+        producer.send(pr2);
+        producer.send(pr3);
+
+        producer.send(pr1);
+
+
+    }
 }
