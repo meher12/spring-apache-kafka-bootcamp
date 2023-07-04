@@ -187,3 +187,5 @@ and return the cars located farthest away, up to 100 km.
 1. Handling Exception on @KafkaListener
    - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-food-order```
    -  @KafkaListener(topics = "t-food-order", errorHandler = "myFoodOrderErrorHandler")
+2. Global Error Handler:
+   ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-simple-number```
