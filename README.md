@@ -169,3 +169,10 @@ already has jackson library
    * Rebalancing: Automatic redistribution of partitions in a Kafka consumer group to ensure load balancing and fault tolerance.
    - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-rebalance```
 6. Kafka Configuration
+7. Message Filter
+   - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-location```
+         <div style="center">
+           <img src="messageFilter.jpg" width="500px"/>
+         </div>
+   - containerFactory: Configures message listener containers for consuming Kafka messages in Spring applications.
+   - By using ***containerFactory="farLocationContainerFactory"*** We filter the list of cars within the range of 1 to 100 and return the cars located farthest away, up to 100 km.
