@@ -183,3 +183,6 @@ and return the cars located farthest away, up to 100 km.
 9. Idempotency - Alternative 
    - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-payment-request```
    - ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --offset earliest --partition 0 --topic t-payment-request```
+## 03 - Handling Exception
+1. Handling Exception on @KafkaListener
+   - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-food-order```
