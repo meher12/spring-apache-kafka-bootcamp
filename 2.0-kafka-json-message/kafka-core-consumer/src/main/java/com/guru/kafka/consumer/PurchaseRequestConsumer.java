@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
+//@Service
 public class PurchaseRequestConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(PurchaseRequestConsumer.class);
