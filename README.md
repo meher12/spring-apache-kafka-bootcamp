@@ -211,4 +211,6 @@ and return the cars located farthest away, up to 100 km.
        -  <div style="center">
            <img src="deadletter.jpg" width="500px"/>
          </div>
+5. Non Blocking Retry 
+   ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 2 --replication-factor 1 --topic t-image-2```
        

@@ -1,5 +1,6 @@
 package com.guru.kafka;
 
+import com.guru.kafka.producer.Image2Producer;
 import com.guru.kafka.producer.ImageProducer;
 import com.guru.kafka.producer.InvoiceProducer;
 import com.guru.kafka.service.ImageService;
@@ -18,17 +19,17 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
     @Autowired
     private SimpleNumberProducer simpleNumberProducer;*/
 
-   /* @Autowired
+    @Autowired
     private ImageService imageService;
 
     @Autowired
-    private ImageProducer imageProducer;*/
+    private Image2Producer image2Producer;
 
-    @Autowired
+   /* @Autowired
     private InvoiceService invoiceService;
 
     @Autowired
-    private InvoiceProducer invoiceProducer;
+    private InvoiceProducer invoiceProducer;*/
 
     public static void main(String[] args) {
         SpringApplication.run(ProducerHandlingExceptionApplication.class, args);
@@ -49,28 +50,30 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
             simpleNumberProducer.send(simpleNumber);
         }*/
 
-     /*   var image1 = imageService.generateImage("jpg");
-        var image2 = imageService.generateImage("svg");
-        var image3 = imageService.generateImage("png");
-        var image4 = imageService.generateImage("gif");
-        var image5 = imageService.generateImage("bmp");
-        var image6 = imageService.generateImage("tiff");
-
-        imageProducer.send(image1, 0);
-        imageProducer.send(image2, 0);
-        imageProducer.send(image3, 0);
-        imageProducer.send(image4, 1);
-        imageProducer.send(image5, 1);
-        imageProducer.send(image6, 1);*/
-
-        for (int i = 0; i < 10; i++) {
+         /* for (int i = 0; i < 10; i++) {
             var invoice = invoiceService.generateInvoice();
 
             if(i>5){
                 invoice.setAmount(0);
             }
             invoiceProducer.send(invoice);
-        }
+        }*/
+
+        var image1 = imageService.generateImage("jpg");
+        var image2 = imageService.generateImage("svg");
+        var image3 = imageService.generateImage("gif");
+        var image4 = imageService.generateImage("gif");
+        var image5 = imageService.generateImage("gif");
+        var image6 = imageService.generateImage("gif");
+
+        image2Producer.send(image1, 0);
+        image2Producer.send(image2, 0);
+        image2Producer.send(image3, 0);
+        image2Producer.send(image4, 1);
+        image2Producer.send(image5, 1);
+        image2Producer.send(image6, 1);
+
+
 
 
     }
