@@ -210,7 +210,13 @@ and return the cars located farthest away, up to 100 km.
        ```
        -  <div style="center">
            <img src="deadletter.jpg" width="500px"/>
-         </div>
+          </div>
 5. Non Blocking Retry 
    ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 2 --replication-factor 1 --topic t-image-2```
+6. Scheduling Consumer
+    ```
+    kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-general-ledger
+    kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-general-ledger
+    ```
+    * Using ***KafkaListenerEndpointRegistry***
        

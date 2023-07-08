@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class ProducerHandlingExceptionApplication implements CommandLineRunner {
 
   /*  @Autowired
@@ -19,12 +21,12 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
     @Autowired
     private SimpleNumberProducer simpleNumberProducer;*/
 
-    @Autowired
+   /* @Autowired
     private ImageService imageService;
 
     @Autowired
     private Image2Producer image2Producer;
-
+*/
    /* @Autowired
     private InvoiceService invoiceService;
 
@@ -59,7 +61,7 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
             invoiceProducer.send(invoice);
         }*/
 
-        var image1 = imageService.generateImage("jpg");
+     /*   var image1 = imageService.generateImage("jpg");
         var image2 = imageService.generateImage("svg");
         var image3 = imageService.generateImage("gif");
         var image4 = imageService.generateImage("gif");
@@ -71,7 +73,7 @@ public class ProducerHandlingExceptionApplication implements CommandLineRunner {
         image2Producer.send(image3, 0);
         image2Producer.send(image4, 1);
         image2Producer.send(image5, 1);
-        image2Producer.send(image6, 1);
+        image2Producer.send(image6, 1);*/
 
 
 
