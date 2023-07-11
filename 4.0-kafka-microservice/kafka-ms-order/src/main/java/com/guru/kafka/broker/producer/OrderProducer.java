@@ -1,15 +1,12 @@
 package com.guru.kafka.broker.producer;
 
 import com.guru.kafka.broker.message.OrderMessage;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import org.apache.kafka.common.header.internals.RecordHeader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 @Service
@@ -21,7 +18,23 @@ public class OrderProducer {
     private KafkaTemplate<String, OrderMessage> kafkaTemplate;
 
     public void publish(OrderMessage message) {
-      kafkaTemplate.send("t-commodity-order", message.getOrderNumber(), message);
+        kafkaTemplate.send("t-commodity-order", message.getOrderNumber(), message)
+                .addCallback(new ListenableFutureCallback<SendResult<String, OrderMessage>>() {
+                    @Override
+                    public void onSuccess(SendResult<String, OrderMessage> result) {
+                        LOG.info("Order {}, item {} published succesfully", message.getOrderNumber(),
+                                message.getItemName());
+                    }
+
+                    @Override
+                    public void onFailure(Throwable ex) {
+                        LOG.warn("Order {}, item {} failed to publish because {}", message.getOrderNumber(),
+                                message.getItemName(), ex.getMessage());
+                    }
+                });
+
+        LOG.info("Just a dummy message for order {}, item {}", message.getOrderNumber(), message.getItemName());
     }
+
 
 }

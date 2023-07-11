@@ -223,6 +223,6 @@ and return the cars located farthest away, up to 100 km.
 1. Creation of the four services: order, pattern, reward And storage 
 2. Automatic Create Topics From Code
 3. Order App: 
-   1.  Database
+   1. Database
    2. kafka Producer
-       
+   3. Handle Kafka Publish Result - Kafka Producer Callback    
