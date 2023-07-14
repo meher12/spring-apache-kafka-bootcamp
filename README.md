@@ -228,3 +228,6 @@ and return the cars located farthest away, up to 100 km.
    3. Handle Kafka Publish Result - Kafka Producer Callback  
    4. We create distinct packages – API, Request, Response, Server, and Command –
 encompassing various mechanisms and functionalities.
+   5. Test the App:
+      - To check consumer: ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-order```
+      - Postman: use "Order 1 Random Item" request inside Commodity Order folder
