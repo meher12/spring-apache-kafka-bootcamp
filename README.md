@@ -231,3 +231,5 @@ encompassing various mechanisms and functionalities.
    5. Test the App:
       - To check consumer: ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-order```
       - Postman: use "Order 1 Random Item" request inside Commodity Order folder
+4. Pattern App:
+   1. Kafka Consumer

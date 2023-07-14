@@ -12777,7 +12777,7 @@
 		},
 		{
 			"key": "kafkaMsOrderUrl",
-			"value": "http://localhost:9001",
+			"value": "http://localhost:9003",
 			"type": "string"
 		},
 		{
