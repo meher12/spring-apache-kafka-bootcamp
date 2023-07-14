@@ -235,5 +235,7 @@ encompassing various mechanisms and functionalities.
       - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-promotion```
       - Postman: use "Create promotion" request inside folder.
       - ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-promotion```
+   7. Promotion & Discount:
+      1. Create discount mechanisms
 4. Pattern App:
    1. Kafka Consumer
