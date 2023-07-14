@@ -231,5 +231,9 @@ encompassing various mechanisms and functionalities.
    5. Test the App:
       - To check consumer: ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-order```
       - Postman: use "Order 1 Random Item" request inside Commodity Order folder
+   6. Promotion Publisher:
+      - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-promotion```
+      - Postman: use "Create promotion" request inside folder.
+      - ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-promotion```
 4. Pattern App:
    1. Kafka Consumer
