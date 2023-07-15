@@ -2,27 +2,28 @@ package com.guru.kafka.api.response;
 
 public class OrderResponse {
 
-    private String orderNumber;
+	private String orderNumber;
+	
+	public OrderResponse() {
+		
+	}
 
-    public OrderResponse() {
-    }
+	public OrderResponse(String orderNumber) {
+		super();
+		this.orderNumber = orderNumber;
+	}
 
-    public OrderResponse(String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
+	public String getOrderNumber() {
+		return orderNumber;
+	}
 
-    public String getOrderNumber() {
-        return orderNumber;
-    }
+	public void setOrderNumber(String orderNumber) {
+		this.orderNumber = orderNumber;
+	}
 
-    public void setOrderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderResponse{" +
-                "orderNumber='" + orderNumber + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "OrderResponse [orderNumber=" + orderNumber + "]";
+	}
+	
 }

@@ -239,3 +239,11 @@ encompassing various mechanisms and functionalities.
       1. Create discount mechanisms
 4. Pattern App:
    1. Kafka Consumer
+5. Storage App:
+    * Kafka Consumer: Listen two type of publisher (Promotion & Discount):
+         <div style="center">
+          <img src="promotiondiscount.jpg" width="500px">
+         </div>
+    * Using ***@KafkaListener(topics = "t-commodity-promotion")*** Annotation at the PromotionConsumer class level.
+    * The two methods are annotated with @KafkaHandler
+    * Postman: you can use "Create promotion" and "Create Discount" requests inside Promotion and Discount folders.

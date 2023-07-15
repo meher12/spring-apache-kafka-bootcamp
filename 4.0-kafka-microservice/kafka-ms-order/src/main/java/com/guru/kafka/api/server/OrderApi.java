@@ -1,5 +1,6 @@
 package com.guru.kafka.api.server;
 
+import com.guru.kafka.api.request.OrderRequest;
 import com.guru.kafka.api.response.OrderResponse;
 import com.guru.kafka.command.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
