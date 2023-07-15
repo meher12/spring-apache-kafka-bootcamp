@@ -237,6 +237,11 @@ encompassing various mechanisms and functionalities.
       - ```kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic t-commodity-promotion```
    7. Promotion & Discount:
       1. Create discount mechanisms
+   8. To filter bonus by branch we're using ***Header***
+   - Add Header To Kafka Message:
+      <div style="center">
+         <img src="headersolution.jpg" width="500px"/> 
+      </div>
 4. Pattern App:
    1. Kafka Consumer
 5. Storage App:
