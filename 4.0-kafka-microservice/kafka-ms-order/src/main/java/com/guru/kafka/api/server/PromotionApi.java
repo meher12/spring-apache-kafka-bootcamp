@@ -1,7 +1,6 @@
 package com.guru.kafka.api.server;
 
 import com.guru.kafka.api.request.PromotionRequest;
-import com.guru.kafka.broker.message.PromotionMessage;
 import com.guru.kafka.command.service.PromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

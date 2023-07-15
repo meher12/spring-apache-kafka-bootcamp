@@ -1,71 +1,78 @@
 package com.guru.kafka.entity;
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "order_items")
 public class OrderItem {
 
-    @Id
-    @GeneratedValue
-    private int orderItemId;
+	@Id
+	@GeneratedValue
+	private int orderItemId;
+	
+	@Column
+	private String itemName;
 
-    @Column
-    private String itemName;
+	@Column
+	private int price;
+	
+	@Column
+	private int quantity;
+	
+	@JoinColumn(name = "order_id")
+	@ManyToOne
+	private Order order;
 
-    @Column
-    private int price;
+	public String getItemName() {
+		return itemName;
+	}
 
-    @Column
-    private int quantity;
+	public Order getOrder() {
+		return order;
+	}
 
-    @JoinColumn(name = "order_id")
-    @ManyToOne
-    private Order order;
+	public int getOrderItemId() {
+		return orderItemId;
+	}
 
-    public String getItemName() {
-        return itemName;
-    }
+	public int getPrice() {
+		return price;
+	}
 
-    public Order getOrder() {
-        return order;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public int getOrderItemId() {
-        return orderItemId;
-    }
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 
-    public int getPrice() {
-        return price;
-    }
+	public void setOrder(Order order) {
+		this.order = order;
+	}
 
-    public int getQuantity() {
-        return quantity;
-    }
+	public void setOrderItemId(int orderItemId) {
+		this.orderItemId = orderItemId;
+	}
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
+	public void setPrice(int price) {
+		this.price = price;
+	}
 
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-
-    public void setOrderItemId(int orderItemId) {
-        this.orderItemId = orderItemId;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderItem [orderItemId=" + orderItemId + ", itemName=" + itemName + ", price=" + price + ", quantity="
-                + quantity + "]";
-    }
-
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	@Override
+	public String toString() {
+		return "OrderItem [orderItemId=" + orderItemId + ", itemName=" + itemName + ", price=" + price + ", quantity="
+				+ quantity + "]";
+	}
+	
 }

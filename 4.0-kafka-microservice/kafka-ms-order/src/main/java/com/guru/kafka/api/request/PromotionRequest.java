@@ -2,20 +2,19 @@ package com.guru.kafka.api.request;
 
 public class PromotionRequest {
 
-    private String promotionCode;
+	private String promotionCode;
 
-    public String getPromotionCode() {
-        return promotionCode;
-    }
+	public String getPromotionCode() {
+		return promotionCode;
+	}
 
-    public void setPromotionCode(String promotionCode) {
-        this.promotionCode = promotionCode;
-    }
+	public void setPromotionCode(String promotionCode) {
+		this.promotionCode = promotionCode;
+	}
 
-    @Override
-    public String toString() {
-        return "PromotionRequest{" +
-                "promotionCode='" + promotionCode + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "PromotionRequest [promotionCode=" + promotionCode + "]";
+	}
+	
 }

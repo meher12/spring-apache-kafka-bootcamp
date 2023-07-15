@@ -14,4 +14,5 @@ public class DiscountProducer {
     public void publish(DiscountMessage message) {
         kafkaTemplate.send("t-commodity-promotion", message);
     }
+
 }

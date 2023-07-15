@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DiscountAction {
+
     @Autowired
     private DiscountProducer producer;
 
@@ -15,4 +16,5 @@ public class DiscountAction {
         var message = new DiscountMessage(request.getDiscountCode(), request.getDiscountPercentage());
         producer.publish(message);
     }
+
 }

@@ -6,7 +6,12 @@ public class DiscountMessage {
 
     private int discountPercentage;
 
+    public DiscountMessage() {
+
+    }
+
     public DiscountMessage(String discountCode, int discountPercentage) {
+        super();
         this.discountCode = discountCode;
         this.discountPercentage = discountPercentage;
     }
@@ -15,12 +20,12 @@ public class DiscountMessage {
         return discountCode;
     }
 
-    public void setDiscountCode(String discountCode) {
-        this.discountCode = discountCode;
-    }
-
     public int getDiscountPercentage() {
         return discountPercentage;
+    }
+
+    public void setDiscountCode(String discountCode) {
+        this.discountCode = discountCode;
     }
 
     public void setDiscountPercentage(int discountPercentage) {
@@ -29,10 +34,7 @@ public class DiscountMessage {
 
     @Override
     public String toString() {
-        return "DiscountMessage{" +
-                "discountCode='" + discountCode + '\'' +
-                ", discountPercentage=" + discountPercentage +
-                '}';
+        return "DiscountMessage [discountCode=" + discountCode + ", discountPercentage=" + discountPercentage + "]";
     }
 
 }

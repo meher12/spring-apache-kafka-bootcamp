@@ -4,40 +4,38 @@ import java.util.List;
 
 public class OrderRequest {
 
-    private String orderLocation;
-    private String creditCardNumber;
-    private List<OrderItemRequest> items;
+	private String orderLocation;
+	private String creditCardNumber;
+	private List<OrderItemRequest> items;
 
-    public String getOrderLocation() {
-        return orderLocation;
-    }
+	public String getCreditCardNumber() {
+		return creditCardNumber;
+	}
 
-    public void setOrderLocation(String orderLocation) {
-        this.orderLocation = orderLocation;
-    }
+	public List<OrderItemRequest> getItems() {
+		return items;
+	}
 
-    public String getCreditCardNumber() {
-        return creditCardNumber;
-    }
+	public String getOrderLocation() {
+		return orderLocation;
+	}
 
-    public void setCreditCardNumber(String creditCardNumber) {
-        this.creditCardNumber = creditCardNumber;
-    }
+	public void setCreditCardNumber(String creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
 
-    public List<OrderItemRequest> getItems() {
-        return items;
-    }
+	public void setItems(List<OrderItemRequest> items) {
+		this.items = items;
+	}
 
-    public void setItems(List<OrderItemRequest> items) {
-        this.items = items;
-    }
+	public void setOrderLocation(String orderLocation) {
+		this.orderLocation = orderLocation;
+	}
 
-    @Override
-    public String toString() {
-        return "OrderRequest{" +
-                "orderLocation='" + orderLocation + '\'' +
-                ", creditCardNumber='" + creditCardNumber + '\'' +
-                ", items=" + items +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "OrderRequest [orderLocation=" + orderLocation + ", creditCardNumber=" + creditCardNumber + ", items="
+				+ items + "]";
+	}
+
 }

@@ -1,84 +1,90 @@
 package com.guru.kafka.entity;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "orders")
 public class Order {
 
-    @Id
-    @GeneratedValue
-    private int orderId;
+	@Id
+	@GeneratedValue
+	private int orderId;
+	
+	@Column
+	private String orderNumber;
+	
+	@Column
+	private String orderLocation;
+	
+	@Column
+	private LocalDateTime orderDateTime;
+	
+	@Column
+	private String creditCardNumber;
+	
+	@OneToMany(mappedBy = "order")
+	private List<OrderItem> items;
 
-    @Column
-    private String orderNumber;
+	public String getCreditCardNumber() {
+		return creditCardNumber;
+	}
 
-    @Column
-    private String orderLocation;
+	public List<OrderItem> getItems() {
+		return items;
+	}
 
-    @Column
-    private LocalDateTime orderDateTime;
+	public LocalDateTime getOrderDateTime() {
+		return orderDateTime;
+	}
 
-    @Column
-    private String creditCardNumber;
+	public int getOrderId() {
+		return orderId;
+	}
 
-    @OneToMany(mappedBy = "order")
-    private List<OrderItem> items;
+	public String getOrderLocation() {
+		return orderLocation;
+	}
 
-    public String getCreditCardNumber() {
-        return creditCardNumber;
-    }
+	public String getOrderNumber() {
+		return orderNumber;
+	}
 
-    public List<OrderItem> getItems() {
-        return items;
-    }
+	public void setCreditCardNumber(String creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
 
-    public LocalDateTime getOrderDateTime() {
-        return orderDateTime;
-    }
+	public void setItems(List<OrderItem> items) {
+		this.items = items;
+	}
 
-    public int getOrderId() {
-        return orderId;
-    }
+	public void setOrderDateTime(LocalDateTime orderDateTime) {
+		this.orderDateTime = orderDateTime;
+	}
 
-    public String getOrderLocation() {
-        return orderLocation;
-    }
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
 
-    public String getOrderNumber() {
-        return orderNumber;
-    }
+	public void setOrderLocation(String orderLocation) {
+		this.orderLocation = orderLocation;
+	}
 
-    public void setCreditCardNumber(String creditCardNumber) {
-        this.creditCardNumber = creditCardNumber;
-    }
+	public void setOrderNumber(String orderNumber) {
+		this.orderNumber = orderNumber;
+	}
 
-    public void setItems(List<OrderItem> items) {
-        this.items = items;
-    }
-
-    public void setOrderDateTime(LocalDateTime orderDateTime) {
-        this.orderDateTime = orderDateTime;
-    }
-
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
-    public void setOrderLocation(String orderLocation) {
-        this.orderLocation = orderLocation;
-    }
-
-    public void setOrderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "Order [orderId=" + orderId + ", orderNumber=" + orderNumber + ", orderLocation=" + orderLocation
-                + ", orderDateTIme=" + orderDateTime + ", creditCardNumber=" + creditCardNumber + ", items=" + items
-                + "]";
-    }
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", orderNumber=" + orderNumber + ", orderLocation=" + orderLocation
+				+ ", orderDateTIme=" + orderDateTime + ", creditCardNumber=" + creditCardNumber + ", items=" + items
+				+ "]";
+	}
 }
