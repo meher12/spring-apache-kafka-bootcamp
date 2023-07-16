@@ -256,3 +256,10 @@ encompassing various mechanisms and functionalities.
    * Kafka Consumer: get ***Header*** from kafka Order message
    * Using Caffeine Cache dependency in Storage App gradle setting to save promotion and discount code in cache
    * Postman: use "Order 1 Random Item" request inside Commodity Order folder
+7. Request - Reply in Kafka
+      <div style="center"> 
+        <img src="requestreply.jpg" with="400px"/>
+      </div>
+   
+     - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-order-reply```
+     - Postman: use "Order 1 Random Item" request inside Commodity Order folder
