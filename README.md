@@ -252,3 +252,7 @@ encompassing various mechanisms and functionalities.
     * Using ***@KafkaListener(topics = "t-commodity-promotion")*** Annotation at the PromotionConsumer class level.
     * The two methods are annotated with @KafkaHandler
     * Postman: you can use "Create promotion" and "Create Discount" requests inside Promotion and Discount folders.
+6. Reward App:
+   * Kafka Consumer: get ***Header*** from kafka Order message
+   * Using Caffeine Cache dependency in Storage App gradle setting to save promotion and discount code in cache
+   * Postman: use "Order 1 Random Item" request inside Commodity Order folder
