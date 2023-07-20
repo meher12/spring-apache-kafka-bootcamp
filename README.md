@@ -263,3 +263,21 @@ encompassing various mechanisms and functionalities.
    
      - ```kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-order-reply```
      - Postman: use "Order 1 Random Item" request inside Commodity Order folder
+## 05 - Kafka Stream 
+1. Change promotion code from lowercase to uppercase using ***Kafka Stream***
+   1. Create three topics:
+      ```
+       kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-order
+       kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-order-masked
+       kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t-commodity-promotion
+      ```
+   2. Create kafka-stream-sample App
+   3. Topology:
+       <div>
+         <img src="promotionUppercase.jpg"/>
+       </div>
+   4. Use Create kafka-stream-order App
+   5. After running Order and Sample App run batch requests with postman "Promotion folder" to execute  1000 requests:
+       <div>
+         <img src="runbatchpromotion.jpg"/>
+       </div>
