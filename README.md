@@ -279,5 +279,5 @@ encompassing various mechanisms and functionalities.
    4. Use Create kafka-stream-order App
    5. After running Order and Sample App run batch requests with postman "Promotion folder" to execute  1000 requests:
        <div>
-         <img src="runbatchpromotion.jpg"/>
+         <img src="runbatchpromotion.jpg" with="400px"/>
        </div>
