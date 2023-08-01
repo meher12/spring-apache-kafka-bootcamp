@@ -292,3 +292,8 @@ encompassing various mechanisms and functionalities.
        <div>
          <img src="kStreamTable.jpg" with="400px"/>
        </div>
+6. Log Compaction:
+      <div>
+         <img src="LogCompaction.jpg" with="400px"/>
+      </div>
+   
