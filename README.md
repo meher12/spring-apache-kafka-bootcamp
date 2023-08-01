@@ -287,3 +287,8 @@ encompassing various mechanisms and functionalities.
     * After running Order and Sample App run batch requests with postman "Promotion folder" to execute  10 requests 
 4. Custom JSON Serde
    * running Order and Sample App run batch requests with postman "Promotion folder" to execute  X requests 
+
+5. The difference between Stream and Table:
+       <div>
+         <img src="kStreamTable.jpg" with="400px"/>
+       </div>
