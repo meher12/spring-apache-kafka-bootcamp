@@ -281,3 +281,4 @@ encompassing various mechanisms and functionalities.
        <div>
          <img src="runbatchpromotion.jpg" with="400px"/>
        </div>
+2. String Serde:    
