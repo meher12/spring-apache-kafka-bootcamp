@@ -281,4 +281,5 @@ encompassing various mechanisms and functionalities.
        <div>
          <img src="runbatchpromotion.jpg" with="400px"/>
        </div>
-2. String Serde:    
+2. String Serde:  
+   * After running Order and Sample App run batch requests with postman "Promotion folder" to execute  10 requests 
