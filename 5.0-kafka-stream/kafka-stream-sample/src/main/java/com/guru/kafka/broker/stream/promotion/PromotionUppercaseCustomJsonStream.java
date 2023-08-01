@@ -1,6 +1,7 @@
 package com.guru.kafka.broker.stream.promotion;
 
 import com.guru.kafka.broker.message.PromotionMessage;
+import com.guru.kafka.broker.serde.PromotionSerde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.kstream.Consumed;
@@ -11,23 +12,23 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.support.serializer.JsonSerde;
 
-//@Configuration
-public class PromotionUppercaseSpringJsonStream {
+@Configuration
+public class PromotionUppercaseCustomJsonStream {
 
     @Bean
     public KStream<String, PromotionMessage> kstreamPromotionUppercase(StreamsBuilder builder) {
         // key
         var stringSerde = Serdes.String();
         // value
-        var jsonSerde = new JsonSerde<>(PromotionMessage.class);
+        var jsonSerde = new PromotionSerde();
         var sourceStream = builder.stream("t-commodity-promotion",
                 Consumed.with(stringSerde, jsonSerde));
         var uppercaseStream = sourceStream.mapValues(this::uppercasePromotionCode);
 
         uppercaseStream.to("t-commodity-promotion-uppercase", Produced.with(stringSerde, jsonSerde));
 
-        sourceStream.print(Printed.<String, PromotionMessage>toSysOut().withLabel("JSON serde original stream"));
-        uppercaseStream.print(Printed.<String, PromotionMessage>toSysOut().withLabel("JSON serde uppercase stream"));
+        sourceStream.print(Printed.<String, PromotionMessage>toSysOut().withLabel("Custom JSON serde original stream"));
+        uppercaseStream.print(Printed.<String, PromotionMessage>toSysOut().withLabel("Custom JSON serde uppercase stream"));
 
         return sourceStream;
 
