@@ -283,3 +283,5 @@ encompassing various mechanisms and functionalities.
        </div>
 2. String Serde:  
    * After running Order and Sample App run batch requests with postman "Promotion folder" to execute  10 requests 
+3. Spring JSON Serde:
+    * After running Order and Sample App run batch requests with postman "Promotion folder" to execute  10 requests 
