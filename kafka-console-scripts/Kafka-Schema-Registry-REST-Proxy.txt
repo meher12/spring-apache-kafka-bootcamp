@@ -1,0 +1,20 @@
+Apache Avro Home
+Confluent Schema Registry Home
+Confluent Schema Registry REST API
+Confluent REST Proxy Home
+Confluent REST Proxy REST API
+Conduktor (Kafka UI)
+Avro Gradle Plugin
+Avro Maven Plugin
+
+
+<ul>
+  <li><a href="https://avro.apache.org/">Apache Avro Home</a></li>
+  <li><a href="https://docs.confluent.io/platform/current/schema-registry/index.html">Confluent Schema Registry Home</a></li>
+  <li><a href="https://docs.confluent.io/platform/current/schema-registry/develop/api.html">Confluent Schema Registry REST API</a></li>
+  <li><a href="https://docs.confluent.io/platform/current/kafka-rest/index.html">Confluent REST Proxy Home</a></li>
+  <li><a href="https://docs.confluent.io/platform/current/kafka-rest/api.html">Confluent REST Proxy REST API</a></li>
+  <li><a href="https://www.conduktor.io/">Conduktor (Kafka UI)</a></li>
+  <li><a href="https://github.com/davidmc24/gradle-avro-plugin">Avro Gradle Plugin</a></li>
+  <li><a href="https://avro.apache.org/docs/current/gettingstartedjava.html">Avro Maven Plugin</a></li>
+</ul>

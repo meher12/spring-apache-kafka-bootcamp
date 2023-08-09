@@ -1,0 +1,27 @@
+<section id="main-content">
+          <h1 id="wrap-up">Wrap Up</h1>
+
+<h2 id="kafka-on-cloud">Kafka on Cloud</h2>
+
+<ul>
+  <li><a href="https://www.confluent.io/confluent-cloud/">Confluent Cloud</a></li>
+  <li><a href="https://aws.amazon.com/msk/">Amazon MSK</a></li>
+  <li><a href="https://bitnami.com/stack/kafka/cloud/google">Kafka for Google Cloud by Bitnami</a></li>
+</ul>
+
+<hr>
+
+<h2 id="additional-tools">Additional Tools</h2>
+
+<ul>
+  <li><a href="https://github.com/edenhill/kcat">Kcat</a></li>
+  <li><a href="https://www.confluent.io/hub/confluentinc/kafka-connect-replicator">Kafka Connect Replicator</a></li>
+  <li><a href="https://www.confluent.io/hub/confluentinc/kafka-connect-datagen">Kafka Connect Datagen</a></li>
+  <li><a href="https://github.com/zz85/kafka-streams-viz">KsqlDB Topology Visualizer</a></li>
+</ul>
+
+<hr>
+
+<p><a href="/spring-kafka-bootcamp">Back to index</a></p>
+
+        </section>

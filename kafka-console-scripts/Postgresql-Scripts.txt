@@ -1,0 +1,36 @@
+Postgresql Scripts - Change Data Capture
+
+DDL (create table) scripts available as part of docker-compose, on folder postgresql/docker-entrypoint-initdb.d
+To alter replica identity, use these statements
+ALTER TABLE public.fin_invoices REPLICA IDENTITY FULL;
+ALTER TABLE public.mkt_promotions  REPLICA IDENTITY FULL;
+ALTER TABLE public.mkt_sales REPLICA IDENTITY FULL;
+To create kafka_fin_invoices, use these statements
+DROP TABLE IF EXISTS kafka_fin_invoices ;
+
+CREATE TABLE IF NOT EXISTS kafka_fin_invoices (
+	invoice_id INT PRIMARY KEY,
+	invoice_amount INT,
+	invoice_currency VARCHAR(3),
+	invoice_number VARCHAR(50),
+	invoice_date DATE
+);
+
+
+Data Engineering
+Click to expand!
+DDL (create table) scripts available as part of docker-compose, on folder postgresql/docker-entrypoint-initdb.d
+To alter replica identity, use these statements
+ALTER TABLE public.fin_invoices REPLICA IDENTITY FULL;
+ALTER TABLE public.mkt_promotions  REPLICA IDENTITY FULL;
+ALTER TABLE public.mkt_sales REPLICA IDENTITY FULL;
+To create kafka_fin_invoices, use these statements
+DROP TABLE IF EXISTS kafka_fin_invoices ;
+
+CREATE TABLE IF NOT EXISTS kafka_fin_invoices (
+	invoice_id INT PRIMARY KEY,
+	invoice_amount INT,
+	invoice_currency VARCHAR(3),
+	invoice_number VARCHAR(50),
+	invoice_date DATE
+);
