@@ -296,4 +296,5 @@ encompassing various mechanisms and functionalities.
       <div>
          <img src="LogCompaction.jpg" with="400px"/>
       </div>
+7. Kafka Stream Operations (Stateless): Look at the folder with the name "KafkaStreamOperations-Stateless"
    
